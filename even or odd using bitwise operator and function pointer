@@ -1,0 +1,14 @@
+#include<stdio.h>
+int odd(int num)
+{
+    
+    (num&1)?printf("odd"):printf("even");
+}
+int main()
+{
+    int num;
+    printf("enter the number:");
+    scanf("%d",&num);
+    int (*fptr)(int)=odd;
+    fptr(num);
+}

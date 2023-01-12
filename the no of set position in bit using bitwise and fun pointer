@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int setpos(int n)
+{
+    int c=0;
+    while(n!=0)
+    {
+        if(n&1==1)
+        {
+            c++;
+        }
+        n=n>>1;
+        
+    }
+    printf("the no of set position:%d",c);
+}
+int main()
+{
+int n;
+printf("enter the number:");
+scanf("%d",&n);
+int (*fptr)(int )=setpos;
+fptr(n);
+}

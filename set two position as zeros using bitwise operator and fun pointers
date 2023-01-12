@@ -1,0 +1,21 @@
+#include<stdio.h>
+int set(int num,int pos,int pos1)
+{
+    int k=0,k1=0;
+    k=num^1<<pos-1;
+    k1=num^1<<pos1-1;
+    int k3=k&k1;
+    printf("%d",k3);
+}
+int main()
+{
+    int num,pos=0,pos1=0;
+    printf("enter the number:");
+    scanf("%d",&num);
+    printf("1st pos:");
+    scanf("%d",&pos);
+    printf("2nd pos:");
+    scanf("%d",&pos1);
+    int (*fptr)(int ,int, int)=set;
+    fptr(num,pos,pos1);
+}

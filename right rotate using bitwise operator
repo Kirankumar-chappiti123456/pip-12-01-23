@@ -1,0 +1,23 @@
+#include<stdio.h>
+int  fun(int num,int r)
+{
+    int lsb,k=0,n;
+    n=sizeof(int)*8;
+    while(r--)
+    {
+        lsb=num&1;
+        num=num>>1|(lsb<<n-r);
+        
+    }
+    printf("after the rotation:%d",num);
+}
+int main()
+{
+    int num,r;
+    printf("enter the number:");
+    scanf("%d",&num);
+     printf("enter the no of rotation:");
+    scanf("%d",&r);
+    int (*fptr)(int,int)=fun;
+    fptr(num,r);
+}
